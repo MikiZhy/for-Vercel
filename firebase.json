@@ -11,6 +11,13 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/fofa/:path*",
+        "destination": "https://caxl1.pages.dev/fofa/:path",
+        "type": 302
+      }
     ]
   }
 }
