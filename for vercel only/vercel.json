@@ -12,7 +12,10 @@
     {
       "source": "/search-gate.php",
       "destination": "https://test.caxlotus.com/search-gate.php"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
     }
   ]
 }
-  
