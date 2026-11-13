@@ -17,6 +17,11 @@
         "source": "/fofa/:path*",
         "destination": "https://caxl1.pages.dev/fofa/:path",
         "type": 302
+      },
+      {
+        "source": "/search-gate.php",
+        "destination": "https://caxl1.pages.dev/search-gate.php",
+        "type": 302
       }
     ]
   }
