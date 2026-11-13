@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare Firebase-specific files
+        run: |
+          mkdir -p firebase-dist
+          cp -R "for vercel only/." firebase-dist/
+          python3 -c 'from pathlib import Path; p=Path("firebase-dist/assets/app.js"); s=p.read_text(); old="const API_BASE = " + chr(39)*2 + ";"; assert s.count(old)==1, "API_BASE not found exactly once"; p.write_text(s.replace(old, "const API_BASE = " + chr(39) + "https://test.caxlotus.com" + chr(39) + ";"))'
+          python3 -c 'import json; p="firebase.json"; d=json.load(open(p)); d["hosting"]["public"]="firebase-dist"; open(p,"w").write(json.dumps(d))'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
