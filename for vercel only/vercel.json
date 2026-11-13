@@ -1,0 +1,18 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/fofa/:path*",
+      "destination": "https://test.caxlotus.com/fofa/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://test.caxlotus.com/api/:path*"
+    },
+    {
+      "source": "/search-gate.php",
+      "destination": "https://test.caxlotus.com/search-gate.php"
+    }
+  ]
+}
+  
