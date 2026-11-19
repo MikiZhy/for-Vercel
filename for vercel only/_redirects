@@ -1,1 +1,9 @@
-/api/*  https://test.caxlotus.com/api/:splat  200
+/api/*            https://test.caxlotus.com/api/:splat          200
+/search-gate.php   https://test.caxlotus.com/search-gate.php     200
+/fofa/*           https://test.caxlotus.com/fofa/:splat         200
+
+/appxz/           https://test.caxlotus.com/appxz/index.html    200
+/appxz/*          https://test.caxlotus.com/appxz/:splat        200
+
+/caapp/           https://test.caxlotus.com/caapp/index.html    200
+/caapp/*          https://test.caxlotus.com/caapp/:splat        200
